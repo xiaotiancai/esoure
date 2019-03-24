@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.how2java.mapper.SeekMapper">
+    <select id="seek"  resultType="Seek">
+	        select * from  seek order by time1 desc
+	    </select>
+
+    <insert id="insert1" parameterType="Seek">
+		insert into seek(bookname1,content1,price1,email1,name1,time1) values(#{bookname1},#{content1},#{price1},#{email1},#{name1},#{time1})
+	</insert>
+</mapper>
+

@@ -1,0 +1,48 @@
+#find{
+    color: #1c1c1c;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    border: none;
+    height: 50px;
+    padding: 0 16px;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+    -moz-box-shadow:2px 2px 3px #b0b0b0;
+    -webkit-box-shadow:2px 2px 3px #b0b0b0;
+    box-shadow:2px 2px 3px #b0b0b0;
+
+}
+#find:focus {
+    outline: none;
+    border-color: #ecebea;
+    box-shadow: 0 0 10px #efeeed;
+}
+#find:hover{
+    outline: none;
+    -moz-box-shadow:2px 2px 14px #333333;
+    -webkit-box-shadow:2px 2px 14px #333333;
+    box-shadow:2px 2px 14px #333333;
+}
+#search{
+    text-align: center; /*让div内部文字居中*/
+    background-color: #fff;
+    margin-top: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align:center;
+}
+#img{
+    text-align: center; /*让div内部文字居中*/
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: 140px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align:center;
+}

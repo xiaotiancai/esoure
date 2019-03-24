@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.how2java.mapper.BookMapper">
+    <select id="search" parameterType="String" resultType="Book">
+	        select * from  book where bookname like CONCAT('%',#{q},'%') or content like CONCAT('%',#{q},'%') or isbn like CONCAT('%',#{q},'%') or author like CONCAT('%',#{q},'%') order by time desc
+	    </select>
+	<select id="info" parameterType="String" resultType="Book">
+	        select * from  book  where isbn=#{isbn}
+	    </select>
+	<update id="add" parameterType="String">
+		update book set num=num+1 where isbn=#{isbn};
+	</update>
+	<insert id="insert" parameterType="Book">
+		insert into book(bookname,author,content,isbn,year,press,price,type,time) values(#{bookname},#{author},#{content},#{isbn},#{year},#{press},#{price},#{type},#{time})
+	</insert>
+</mapper>
+
